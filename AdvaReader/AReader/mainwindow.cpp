@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
     dataFileModel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files);
     //filters for advacam sources
     QStringList nameFilter;
-    nameFilter<<"*.txt"<<"*.pmx"<<"*.pbf"<<"*.h5"<<"*.pmx"<<"*.pbf"<<".dsc"<<"*.idx"<<"*.clog"<<".dsc";
+    nameFilter<<"*.txt"<<"*.pmx"<<"*.pbf"<<"*.h5"<<"*.pmx"<<"*.pbf"<<"*.dsc"<<"*.idx"<<"*.clog";
     dataFileModel->setNameFilters(nameFilter);
 
     dataFileModel->setRootPath(sPath);
