@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    //settings root's path
+    //settings root's pathgit
     QString sPath="/";
 
     //settings file System of directories
@@ -61,4 +61,5 @@ void MainWindow::on_LV_showFiles_clicked(const QModelIndex &index)
         QMessageBox::information(0, "info", file.errorString());
    QTextStream in(&file);
    ui->TB_readAsText->setText(in.readAll());
+
 }

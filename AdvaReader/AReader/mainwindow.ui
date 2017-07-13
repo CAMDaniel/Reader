@@ -53,12 +53,12 @@
      </item>
     </layout>
    </widget>
-   <widget class="QMpxFramePanel" name="frame" native="true">
+   <widget class="QMpxFramePanel" name="frameReader" native="true">
     <property name="geometry">
      <rect>
-      <x>800</x>
+      <x>780</x>
       <y>20</y>
-      <width>441</width>
+      <width>481</width>
       <height>511</height>
      </rect>
     </property>
