@@ -31,10 +31,10 @@
       <widget class="QTreeView" name="TV_fileSystem"/>
      </item>
      <item>
-      <widget class="QListView" name="LV_files"/>
+      <widget class="QListView" name="LV_showFiles"/>
      </item>
      <item>
-      <widget class="QTreeView" name="TV_advacamFiles"/>
+      <widget class="QTreeView" name="TV_dataFiles"/>
      </item>
     </layout>
    </widget>
@@ -49,7 +49,7 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="1">
-      <widget class="QTextBrowser" name="TB_readAsTxt"/>
+      <widget class="QTextBrowser" name="TB_readAsText"/>
      </item>
     </layout>
    </widget>

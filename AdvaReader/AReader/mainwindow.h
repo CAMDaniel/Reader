@@ -20,12 +20,13 @@ public:
 
 private slots:
     void on_TV_fileSystem_clicked(const QModelIndex &index);
-    void on_LV_files_clicked(const QModelIndex &index);
+    void on_LV_showFiles_clicked(const QModelIndex &index);
 
 private:
     Ui::MainWindow *ui;
     QFileSystemModel *dirModel;
     QFileSystemModel *fileModel;
+    QFileSystemModel *dataFileModel;
 };
 
 #endif // MAINWINDOW_H
