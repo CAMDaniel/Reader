@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/qmpxframepanel">
+        <file alias="open">resources/open.png</file>
+        <file alias="cm_cool">resources/cm_cool.png</file>
+        <file alias="cm_gray">resources/cm_gray.png</file>
+        <file alias="cm_hot">resources/cm_hot.png</file>
+        <file alias="cm_hsl">resources/cm_hsl.png</file>
+        <file alias="cm_invgray">resources/cm_invgray.png</file>
+        <file alias="cm_jet">resources/cm_jet.png</file>
+        <file alias="cm_color">resources/color.png</file>
+        <file alias="save">resources/disk_black.png</file>
+        <file alias="grid">resources/grid.png</file>
+        <file alias="magnet">resources/magnet.png</file>
+        <file alias="overwarn">resources/overwarn.png</file>
+        <file alias="rotdata">resources/rotata.png</file>
+        <file alias="underwarn">resources/underwarn.png</file>
+    </qresource>
+</RCC>
