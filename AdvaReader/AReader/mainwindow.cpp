@@ -13,26 +13,28 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //settings root's pathgit
     QString sPath="/";
+    QStringList nameFilter;
+    nameFilter<<"*.txt"<<"*.pmx"<<"*.pbf"<<"*.h5"<<"*.pmx"<<"*.pbf"<<"*.dsc"<<"*.idx"<<"*.clog";
 
     //settings file System of directories
     dirModel=new QFileSystemModel(this);
     dirModel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs);
     dirModel->setRootPath(sPath);
 
+
     //settings files in the columns
     fileModel=new QFileSystemModel(this);
     fileModel->setFilter(QDir::NoDotAndDotDot | QDir::Files);
     fileModel->setRootPath(sPath);
+    fileModel->setNameFilters(nameFilter);
+    fileModel->setNameFilterDisables(false);
 
     //settings data files in system
     dataFileModel=new QFileSystemModel(this);
     dataFileModel->setFilter(QDir::NoDotAndDotDot | QDir::AllDirs | QDir::Files);
-    //filters for advacam sources
-    QStringList nameFilter;
-    nameFilter<<"*.txt"<<"*.pmx"<<"*.pbf"<<"*.h5"<<"*.pmx"<<"*.pbf"<<"*.dsc"<<"*.idx"<<"*.clog";
-    dataFileModel->setNameFilters(nameFilter);
-
     dataFileModel->setRootPath(sPath);
+    //filters for advacam sources
+    dataFileModel->setNameFilters(nameFilter);
     dataFileModel->setNameFilterDisables(false);
 
     ui->TV_dataFiles->setModel(dataFileModel);
@@ -61,5 +63,8 @@ void MainWindow::on_LV_showFiles_clicked(const QModelIndex &index)
         QMessageBox::information(0, "info", file.errorString());
    QTextStream in(&file);
    ui->TB_readAsText->setText(in.readAll());
+
+   double test[10]={1,2,3,4,5,6,7,8,9,10};
+   ui->frameReader->setData(test, 2, 5);
 
 }
